@@ -1,7 +1,7 @@
-while (1 -eq 1 ){
+:test while (1 -eq 1 ){
     $success = Test-Path -Path .\success
     if ($success) {
-	exit
+    	Break test
     }
-    ./getadmin.cmd
+    cmd.exe /c 'getadmin.cmd'
     }

@@ -22,5 +22,4 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 echo success > success
-start powershell.exe
-
+start powershell.exe -c "$success = Test-Path -Path .\ranonce; if ($success) {exit} else {echo '' > ranonce}"
